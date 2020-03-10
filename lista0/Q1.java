@@ -5,29 +5,31 @@ import java.util.Scanner;
 public class Q1 {
 
 	public static int candies(int a) {
-
-
-
-		int r = a - 5;
-
-		if (r%3 == 0) {
-			if (r <= 0) {
-
-				return -1;
-
-			} else {
-
-				return r;
+		
+		int r = (a - 5);
+		
+			if (r%3 == 0) {
+				if (r > 0) {
+					return r;
+				} 
+				else {
+					return -1;
+				}
+			} 
+			else if(r%3 == 2) {
+				if(r-5 > 10) {
+					return r-5;
+				}
+				else {
+					return -1;
+				}
 			}
-
-		} else if(r%3 == 2) {
-			if(r-5 > 10) {
-				return r-5;
+			else if(r%3 == 1 && r > 30) {
+				
+				return r-10;
 			}
-
-		}
+		
 		return -1;
-
 	}
 
 	public static void main(String[] args) {
